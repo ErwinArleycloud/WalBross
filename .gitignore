@@ -1,0 +1,33 @@
+# ------------------ Python ------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+*.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ------------------ Flask ------------------
+instance/
+*.log
+
+# ------------------ SQLite ------------------
+*.db
+*.sqlite3
+
+# ------------------ Archivos de sistema ------------------
+.DS_Store
+Thumbs.db
+
+# ------------------ Node / Frontend (si llegas a usar) ------------------
+node_modules/
+dist/
+
+# ------------------ Configuración IDE ------------------
+.vscode/
+.idea/
+*.swp

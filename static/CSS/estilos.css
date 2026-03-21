@@ -1,0 +1,177 @@
+/* ------------------ Estilos Generales ------------------ */
+body {
+    font-family: 'Montserrat', sans-serif; /* Fuente principal */
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto gris claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------ Navbar ------------------ */
+.navbar {
+    background-color: #121212 !important; /* Fondo igual al body */
+    border-bottom: 1px solid #333; /* Línea divisoria inferior */
+}
+
+.navbar-brand {
+    font-size: clamp(1.2rem, 4vw, 1.8rem) !important; /* Tamaño dinámico corregido */
+    white-space: nowrap; /* Evita saltos de línea */
+    color: #ffffff !important; /* Texto blanco */
+    display: flex;
+    align-items: center; /* Centrado vertical */
+}
+
+/* Logo dentro del navbar */
+.navbar-brand img {
+    max-height: 40px; /* Controla tamaño máximo */
+    width: auto;
+    margin-right: 10px; /* Espacio entre logo y texto */
+}
+
+/* ------------------ Banner Rojo (Hero Section) ------------------ */
+.hero-menu {
+    background-color: #df2121; /* Rojo principal */
+    color: #ffffff !important; /* Texto blanco */
+    padding: clamp(20px, 5vw, 40px) 15px; /* Padding dinámico */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero-menu h1 {
+    font-size: clamp(1.8rem, 7vw, 3rem) !important; /* Tamaño dinámico */
+    font-weight: bold;
+}
+
+/* ------------------ Navegación de categorías ------------------ */
+.categorias-nav {
+    background-color: #1e1e1e !important; /* Fondo oscuro */
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: start;
+    gap: 12px;
+    overflow-x: auto; /* Scroll horizontal */
+    white-space: nowrap;
+    padding: 15px;
+    -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+}
+
+.categorias-nav::-webkit-scrollbar {
+    display: none; /* Oculta scroll en Chrome/Safari */
+}
+
+/* Botones de categoría */
+.btn-categoria {
+    flex-shrink: 0;
+    white-space: nowrap;
+    background-color: #2a2a2a;
+    border: 2px solid #df2121;
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Estado activo y hover */
+.btn-categoria.active, .btn-categoria:hover {
+    background-color: #df2121;
+    color: white;
+}
+
+/* ------------------ Tarjetas de Producto ------------------ */
+.card-producto {
+    color: #cccccc !important;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    height: 100%; /* Todas las tarjetas con misma altura */
+}
+
+.card-producto:hover {
+    transform: translateY(-8px); /* Efecto flotante */
+}
+
+.img-producto {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ajusta imagen sin deformar */
+}
+
+/* ------------------ Textos dentro de las tarjetas ------------------ */
+.card-title {
+    color: #ffffff !important;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.card-text {
+    color: #cccccc !important;
+    font-size: 0.95rem;
+}
+
+.text-danger {
+    color: #ff5252 !important;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ------------------ Badge de promoción ------------------ */
+.badge-promocion {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ffc107; /* Amarillo */
+    color: #000;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+/* ------------------ Contenedor principal ------------------ */
+.container {
+    overflow: hidden; /* Evita scroll horizontal */
+}
+
+/* Ajustes de textos dentro de card-body */
+.card-body h5 {
+    color: #ffffff !important;
+}
+
+.card-body p.text-muted {
+    color: #cccccc !important;
+}
+
+/* ------------------ Scroll lateral de categorías ------------------ */
+.categorias-scroll {
+    overflow-x: auto; /* Scroll horizontal */
+    white-space: nowrap; /* Evita salto de línea */
+    display: flex;
+    gap: 12px;
+    padding: 0 15px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Oculta scroll en Firefox */
+}
+
+.categorias-scroll::-webkit-scrollbar {
+    display: none; /* Oculta scroll en Chrome/Safari */
+}
+
+/* Botones dentro del scroll */
+.btn-categoria {
+    flex: 0 0 auto; 
+    min-width: 80px; /* Tamaño mínimo */
+}
+
+/* Contenedor de categorías */
+.categorias-container {
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 15px 0; /* Espaciado vertical */
+    margin-bottom: 30px; /* Separación respecto a tarjetas */
+    overflow: hidden;
+}
