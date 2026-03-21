@@ -94,7 +94,7 @@ Optimización de rendimiento y accesibilidad.
 ![Login Panel](static/img/login.jpg)
 
 ### Panel de Administracion - Inventario
-![Inventario Actual](static/img/invetario.jpg)
+![Inventario Actual](static/img/inventario.jpg)
 
 
 ## AUTOR
