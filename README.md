@@ -88,13 +88,13 @@ Optimización de rendimiento y accesibilidad.
 ## Capturas de pantalla
 
 ## Catalogo de productos
-![Catalogo WalBross](static/img/catalogo.jpg.png)
+![Catalogo WalBross](static/img/catalogo.jpg)
 
 ### Panel de Administracion - login
-![Login Panel](static/img/login.jpg.png)
+![Login Panel](static/img/login.jpg)
 
 ### Panel de Administracion - Inventario
-![Inventario Actual](static/img/invetario.jpg.png)
+![Inventario Actual](static/img/invetario.jpg)
 
 
 ## AUTOR
