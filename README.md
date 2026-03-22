@@ -44,15 +44,14 @@ WalBross/
    ```bash
    git clone https://github.com/ErwinArleycloud/WalBross.git
    
-2. Abrimos la carpeta del proyecto:
-   cd WalBross
+2. Instalar dependencias:
+   Pip install flask
 
-3. Abrimos index.html en nuestro navegador para ver el catalogo de productos
+3. Ejecutamos la aplicaciom:
+  python app.py usando ctrl + ñ en vs
    
-4. Para acceder al Panel del Administrador:
-- Abrimos admin.html en el navegador
-- ingresamos la contraseña maestra para entrar.
-- Desde alli prodremos añadir, editar o eliminar productos.
+4. Abrimos en nuestro navegador:
+http://127.0.0.1:5000/login
 
 ## Cómo funciona
 
