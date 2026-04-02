@@ -2,26 +2,26 @@ import sqlite3
 import os  # Manejo de rutas de carpetas
 from flask import Flask, render_template, request, redirect, url_for, session
 from werkzeug.utils import secure_filename  # Para subir archivos de forma segura
+from werkzeug.security import check_password_hash
 
 # Inicialización de la aplicación Flask
 app = Flask(__name__, static_folder='static')
 app.secret_key = 'walbross_secreto_2026'  # Clave secreta para sesiones
 
-# Contraseña de acceso al panel admin
-ADMIN_PASSWORD = "America_1927"
+ADMIN_PASSWORD_HASH= "scrypt:32768:8:1$pGfXm9vR$a87d0c3d9b4f" #Hash para contraseña
 
-# ------------------ RUTA LOGIN ------------------
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        password = request.form.get('password')
-        if password == ADMIN_PASSWORD:
-            # Si la contraseña es correcta, se guarda sesión
+        password_ingresada = request.form.get('password')
+        
+        # 3. VALIDACIÓN: Usamos check_password_hash para comparar la entrada con el hash
+        if check_password_hash(ADMIN_PASSWORD_HASH, password_ingresada):
             session['admin_logged_in'] = True
             return redirect(url_for('admin'))
         else:
-            # Mensaje de error si la contraseña es incorrecta
             return "Contraseña incorrecta. <a href='/login'>Intentar de nuevo</a>"
+            
     return render_template('login.html')
 
 # ------------------ RUTA LOGOUT ------------------
