@@ -1,0 +1,147 @@
+(function () {
+    var startTime = Date.now();
+    var errorLogged = false;
+
+    // Communicate with google tag manager through queued requests and a request listener.
+
+    window.ayoaGetGoogleAnalyticsIdsQueuedRequests =
+        window.ayoaGetGoogleAnalyticsIdsQueuedRequests || [];
+
+    var queuedRequests = window.ayoaGetGoogleAnalyticsIdsQueuedRequests;
+
+    window.ayoaGetGoogleAnalyticsIds = function getGoogleAnalyticsIds() {
+        return new Promise(function (resolve) {
+            if (!window.ayoaGetGoogleAnalyticsIdsAvailable) {
+                return resolve(null);
+            }
+
+            var timeout = null;
+
+            var request = {
+                callback: function (googleAnalyticsIds) {
+                    if (timeout) {
+                        clearTimeout(timeout);
+                        timeout = null;
+                    }
+
+                    index = queuedRequests.indexOf(request);
+
+                    if (index !== -1) {
+                        queuedRequests.splice(index, 1);
+                    }
+
+                    resolve(googleAnalyticsIds);
+                },
+            };
+
+            var timeoutMilliseconds = Math.max(50, startTime + 5 * 1000 - Date.now());
+
+            timeout = setTimeout(function () {
+                if (!errorLogged) {
+                    errorLogged = true;
+                    console.error(new Error('getGoogleAnalyticsIds timed out.'));
+                }
+
+                request.callback(null);
+            }, timeoutMilliseconds);
+
+            if (window.ayoaGetGoogleAnalyticsIdsRequestListener) {
+                window.ayoaGetGoogleAnalyticsIdsRequestListener(request);
+            } else {
+                queuedRequests.push(request);
+            }
+        });
+    };
+})();
+
+(function () {
+    var googleAnalyticsIds;
+
+    var sendAnalyticsParamsRequest = function (callback) {
+        var request = new XMLHttpRequest();
+
+        request.addEventListener('loadend', callback);
+
+        request.withCredentials = true;
+
+        var url = "https://auth.ayoa.com/analytics-params";
+
+        if (window.analyticsParamsOverrideUrl) {
+            url += '?url=' + encodeURIComponent(window.analyticsParamsOverrideUrl);
+        } else {
+            url += '?url=' + encodeURIComponent(window.location.href);
+        }
+
+        if (document.referrer) {
+            url += '&referrer=' + encodeURIComponent(document.referrer);
+        }
+
+        if (googleAnalyticsIds) {
+            url += '&google_analytics_ids=' + encodeURIComponent(JSON.stringify(googleAnalyticsIds));
+        }
+
+        request.open('GET', url);
+
+        request.send();
+    };
+
+    var analyticsIdCookieNames = ['_fbp', '_rdt_uuid'];
+
+    var lastDocumentCookie;
+
+    var processAnalyticsIdCookieNames = function () {
+        if (document.cookie === lastDocumentCookie) {
+            return false;
+        }
+
+        lastDocumentCookie = document.cookie;
+
+        var documentCookieNames = document.cookie.split(';').map(function (part) {
+            var index = part.indexOf('=');
+
+            if (index === -1) {
+                return part.trim();
+            } else {
+                return part.slice(0, index).trim();
+            }
+        });
+
+        var found = false;
+
+        for (var i = analyticsIdCookieNames.length - 1; i >= 0; i--) {
+            var analyticsIdCookieName = analyticsIdCookieNames[i];
+
+            if (documentCookieNames.includes(analyticsIdCookieName)) {
+                found = true;
+                analyticsIdCookieNames.splice(i, 1);
+            }
+        }
+
+        return found;
+    };
+
+    window.ayoaGetGoogleAnalyticsIds().then(function (result) {
+        googleAnalyticsIds = result;
+
+        processAnalyticsIdCookieNames();
+
+        sendAnalyticsParamsRequest(function () {
+            var loop = function () {
+                if (!analyticsIdCookieNames.length) {
+                    return;
+                }
+
+                var interval = setInterval(function () {
+                    var found = processAnalyticsIdCookieNames();
+
+                    if (found) {
+                        clearInterval(interval);
+                        sendAnalyticsParamsRequest(loop);
+                    }
+                }, 250);
+            };
+
+            loop();
+        });
+    });
+})();

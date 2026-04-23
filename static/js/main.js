@@ -1,7 +1,7 @@
 // ------------------ FUNCIÓN: Enviar pedido por WhatsApp ------------------
 function enviarpedido(nombre, precio) {
     // 1. Número de teléfono del negocio (formato internacional)
-    const telefono = "573043247458";
+    const telefono = "573024607686";
     
     // 2. Formatear el precio con separadores de miles (estilo colombiano)
     const precioFormateado = new Intl.NumberFormat('es-CO').format(precio);

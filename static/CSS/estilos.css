@@ -175,3 +175,61 @@ body {
     margin-bottom: 30px; /* Separación respecto a tarjetas */
     overflow: hidden;
 }
+/* Estilo específico para la imagen de la tarjeta */
+.img-producto {
+  height: 180px;  /* Cambia este número a la altura que quieras */
+  object-fit: cover; /* Corta la imagen de forma inteligente para rellenar */
+  object-position: center; /* Centra el corte */
+}
+
+/* ------------------ Botones de Redes Sociales ------------------ */
+.social-btn {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: #df2121;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(223, 33, 33, 0.2);
+}
+
+.social-btn:hover {
+    background-color: #b91c1c;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(223, 33, 33, 0.3);
+    text-decoration: none;
+}
+
+.logo-container {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+
+.social-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.tiktok-logo {
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.tiktok-logo .social-logo {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.social-btn:hover .social-logo {
+    transform: scale(1.1);
+}

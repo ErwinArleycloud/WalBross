@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-3362,-2407)">
+        <g transform="matrix(1,0,0,1,3320.25,2113)">
+            <g id="Folder-icon" serif:id="Folder icon" transform="matrix(0.970238,0,0,0.970238,3.18497,8.9263)">
+                <g id="folder" transform="matrix(0.759855,0,0,0.818794,22.2643,-107.548)">
+                    <path d="M92.712,517.52L92.712,545.801C92.712,548.807 90.082,551.248 86.843,551.248L29.227,551.248C25.987,551.248 23.357,548.807 23.357,545.801L23.357,517.52C23.357,514.513 25.987,512.073 29.227,512.073L86.843,512.073C90.082,512.073 92.712,514.513 92.712,517.52ZM34.503,543.477L57.817,543.477C59.689,543.477 61.209,542.067 61.209,540.33C61.209,538.593 59.689,537.183 57.817,537.183L34.503,537.183C32.631,537.183 31.112,538.593 31.112,540.33C31.112,542.067 32.631,543.477 34.503,543.477Z" style="fill:white;"/>
+                </g>
+                <g id="folder1" serif:id="folder" transform="matrix(0.759855,0,0,0.818794,22.2643,-107.548)">
+                    <path d="M86.763,499.296C90.048,499.296 92.712,501.768 92.712,504.817L92.712,505.526L36.617,505.526L36.617,499.812C36.617,496.763 39.281,494.291 42.566,494.291L52.931,494.291C54.086,494.291 55.215,494.603 56.182,495.188C58.561,496.628 59.584,499.296 59.584,499.296L86.763,499.296Z" style="fill:rgb(255,204,0);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -11,3 +11,10 @@ CREATE TABLE productos (
     es_promocion BOOLEAN DEFAULT 0,       -- Indica si el producto está en promoción (0 = no, 1 = sí)
     categoria TEXT NOT NULL               -- Categoría del producto (pollos, combos, bebidas, adicionales)
 );
+
+CREATE TABLE IF NOT EXiSTS visitas (
+    id INTEGER PRIMARY KEY,
+    conteo INTEGER DEFAULT 0
+);
+-- Insertamos el primer registro con valor 0
+INSERT INTO visitas (id, conteo) SELECT 1, 0 WHERE NOT EXISTS (SELECT 1 FROM visitas WHERE id =1 );

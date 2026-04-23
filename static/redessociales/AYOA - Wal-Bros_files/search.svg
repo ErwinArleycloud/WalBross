@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-5356,-138)">
+        <g id="search" transform="matrix(0.251536,0,0,0.285081,4076.38,119.798)">
+            <rect x="5089.69" y="65" width="198.778" height="175.389" style="fill:none;"/>
+            <g id="Search" transform="matrix(3.61949,0,0,3.1936,-3886,16.4586)">
+                <g transform="matrix(0.831272,-0.168728,-0.168728,0.831272,499.111,424.041)">
+                    <path d="M2453.97,59.194L2442.55,47.77C2441.14,50.135 2439.2,51.958 2436.66,53.197L2448.32,64.851C2450.67,67.207 2453.85,67.853 2455.41,66.292C2456.97,64.731 2456.33,61.551 2453.97,59.194Z" style="fill:rgb(140,212,0);"/>
+                </g>
+                <g transform="matrix(1.10594,0,0,1.10594,-180.171,-2.04425)">
+                    <path d="M2426.55,19.296C2436.07,19.296 2443.81,27.03 2443.81,36.556C2443.81,46.082 2436.07,53.815 2426.55,53.815C2417.02,53.815 2409.29,46.082 2409.29,36.556C2409.29,27.03 2417.02,19.296 2426.55,19.296ZM2426.55,25.498C2432.65,25.498 2437.61,30.453 2437.61,36.556C2437.61,42.659 2432.65,47.613 2426.55,47.613C2420.44,47.613 2415.49,42.659 2415.49,36.556C2415.49,30.453 2420.44,25.498 2426.55,25.498Z" style="fill:white;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
