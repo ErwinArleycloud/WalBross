@@ -95,11 +95,6 @@ body {
     transform: translateY(-8px); /* Efecto flotante */
 }
 
-.img-producto {
-    width: 100%;
-    height: 200px;
-    object-fit: cover; /* Ajusta imagen sin deformar */
-}
 
 /* ------------------ Textos dentro de las tarjetas ------------------ */
 .card-title {
@@ -176,10 +171,12 @@ body {
     overflow: hidden;
 }
 /* Estilo específico para la imagen de la tarjeta */
-.img-producto {
-  height: 180px;  /* Cambia este número a la altura que quieras */
-  object-fit: cover; /* Corta la imagen de forma inteligente para rellenar */
-  object-position: center; /* Centra el corte */
+.card-img-top.img-producto {
+  width: 100% !important;
+  height: 300px !important;  /* Altura mayor para mostrar imagen completa */
+  object-fit: contain !important; /* Muestra imagen completa sin cortar */
+  object-position: center !important; /* Centra la imagen */
+  background-color: #2a2a2a !important; /* Fondo para espacios vacíos */
 }
 
 /* ------------------ Botones de Redes Sociales ------------------ */
@@ -232,4 +229,78 @@ body {
 
 .social-btn:hover .social-logo {
     transform: scale(1.1);
+}
+
+/* ------------------ Contenedores Desplegables (Details) ------------------ */
+details.custom-details {
+    background-color: #df2121 !important;
+    border: 2px solid #df2121 !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(223, 33, 33, 0.1);
+}
+
+.custom-details:hover {
+    box-shadow: 0 6px 20px rgba(223, 33, 33, 0.2);
+    transform: translateY(-2px);
+}
+
+.custom-details[open] {
+    box-shadow: 0 0 25px rgba(223, 33, 33, 0.6), 0 0 50px rgba(223, 33, 33, 0.4);
+    transform: scale(1.02);
+}
+
+.custom-summary {
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 10px 0;
+    border: none;
+    background: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.custom-summary:hover {
+    color: #f8d7da;
+}
+
+.custom-summary::-webkit-details-marker {
+    display: none;
+}
+
+.custom-summary::before {
+    content: '▶';
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+    color: #ffffff;
+}
+
+.custom-details[open] .custom-summary::before {
+    transform: rotate(90deg);
+}
+
+.custom-content {
+    padding: 15px 0 0 0;
+    color: #ffffff;
+    line-height: 1.6;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
