@@ -174,9 +174,10 @@ body {
 .card-img-top.img-producto {
   width: 100% !important;
   height: 300px !important;  /* Altura mayor para mostrar imagen completa */
-  object-fit: contain !important; /* Muestra imagen completa sin cortar */
+  object-fit: cover !important; /* Ocupa todo el espacio sin dejar márgenes */
   object-position: center !important; /* Centra la imagen */
-  background-color: #2a2a2a !important; /* Fondo para espacios vacíos */
+  border-radius: 15px !important; /* Bordes redondeados consistentes */
+  margin: 0 !important; /* Sin márgenes externos */
 }
 
 /* ------------------ Botones de Redes Sociales ------------------ */
