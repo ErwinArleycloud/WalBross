@@ -1,5 +1,5 @@
 # 🐔 WalBross
-![Logo WalBross](static/logo/WalBross.png.jpeg)
+![Logo WalBross](static/logo/WalBroslogo.jpeg)
 
 WalBross es una plataforma web para mostrar y gestionar productos de manera sencilla y atractiva.  
 Incluye filtrado por categorías, integración con WhatsApp para pedidos, un diseño moderno con tarjetas de producto y un Panel de Administración para gestionar el inventario.
