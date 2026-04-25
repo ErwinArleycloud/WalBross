@@ -40,12 +40,12 @@ WalBross/
 ```
 
 ## ⚙️ Instalación y uso
-1. Clonamos el repositorio:
+1. **Clonamos el repositorio:**
    ```bash
-   git clone https://github.com/ErwinArleycloud/WalBross.git
+   git clone [https://github.com/ErwinArleycloud/WalBross.git](https://github.com/ErwinArleycloud/WalBross.git)
    
 2. Instalar dependencias:
-   Pip install flask
+  pip install -r requirements.txt
 
 3. Ejecutamos la aplicaciom:
   python app.py usando ctrl + ñ en vs
