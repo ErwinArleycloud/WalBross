@@ -89,13 +89,13 @@ Optimización de rendimiento y accesibilidad.
 ![URL de Wa-Bros](static/img/urlwalbros.jpeg)
 
 ## Catalogo de productos
-![Catalogo WalBross](static/img/catalogo.jpg)
+![Catalogo WalBross](static/img/inventariowalbros.jpeg)
 
 ### Panel de Administracion - login
-![Login Panel](static/img/login.jpg)
+![Login Panel](static/img/loginpanel.jpeg)
 
-### Panel de Administracion - Inventario
-![Inventario Actual](static/img/inventariowalbros.jpeg)
+### Panel de Administracion - control
+![Inventario Actual](static/img/paneldecontroladm.jpeg)
 
 
 ## AUTOR
