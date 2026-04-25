@@ -6,7 +6,7 @@ from werkzeug.security import check_password_hash
 from whitenoise import WhiteNoise
 
 # Inicialización de la aplicación Flask
-app = Flask(__name__, static_folder='static', static_url_path='/static')
+app = Flask(__name__, static_folder='static', static_url_path='/static', template_folder='templates')
 
 # --- MEJORA DE WHITENOISE ---
 # Usamos la ruta absoluta para que Azure no se pierda buscando los estilos
@@ -45,6 +45,11 @@ def login():
 def logout():
     session.pop('admin_logged_in', None)
     return redirect(url_for('index'))
+
+# Ruta explícita para servir archivos estáticos
+@app.route('/static/<path:filename>')
+def serve_static(filename):
+    return app.send_static_file(filename)
 
 @app.route('/')
 def index():
