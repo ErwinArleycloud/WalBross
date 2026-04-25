@@ -1,42 +1,42 @@
 # 🐔 WalBross
+# 🍗 WalBross - Gestión Comercial & Cloud Deployment
 ![Logo WalBross](static/logo/WalBroslogo.jpeg)
 
-WalBross es una plataforma web para mostrar y gestionar productos de manera sencilla y atractiva.  
-Incluye filtrado por categorías, integración con WhatsApp para pedidos, un diseño moderno con tarjetas de producto y un Panel de Administración para gestionar el inventario.
+WalBross es una solución **Full Stack** diseñada para digitalizar la operación de un negocio real. Permite la gestión de inventarios en tiempo real, administración segura y conexión directa con clientes mediante WhatsApp.
 
-## Características principales:
-- **Catálogo dinámico**: tarjetas de producto con imágenes, precios y descripciones.
-- **Filtrado por categorías**: botones interactivos que muestran solo los productos seleccionados.
-- **Pedidos por WhatsApp**: integración directa para confirmar pedidos con un clic.
-- **Diseño responsive**: estilos modernos y adaptables a diferentes pantallas.
-- **Panel de Administración**:
-  - Login seguro en `http://127.0.0.1:5000/login` con contraseña maestra.
-  - Añadir nuevos productos con nombre, descripción, precio, foto y categoría.
-  - Marcar productos como oferta.
-  - Editar o eliminar productos del inventario actual.
-  - Cerrar sesión para garantizar seguridad y control de acceso.
+## 🚀 Infraestructura y Cloud
+A diferencia de proyectos locales, WalBross está configurado para entornos de producción en la nube:
 
-##  Estructura del proyecto:
+* **Cloud Provider:** Microsoft Azure (App Service).
+* **Pila Técnica:** Python 3.12 sobre Linux (Ubuntu Server).
+* **Despliegue:** Configurado mediante `Procfile` y `web.config` para escalabilidad.
 
+### ☁️ Evidencia de Configuración en Azure
+![Configuración Azure](static/img/Configuracion_infraestructuraazure.jpeg)
+
+---
+
+## 🛠️ Características Principales
+- **Catálogo Dinámico**: Filtrado inteligente por categorías.
+- **Pedidos por WhatsApp**: Integración directa con API para confirmación de pedidos.
+- **Panel de Administración**: 
+  - Login seguro con contraseña maestra.
+  - CRUD completo (Crear, Leer, Actualizar, Borrar) de productos.
+  - Gestión de ofertas y estados de inventario.
+
+## 📁 Estructura del Proyecto
+```text
 WalBross/
-│── app.py                 Aplicación principal Flask
-│── .gitignore             Archivos ignorados por Git
-│── static/                Archivos estáticos
-│   ├── css/                Estilos
-│   │   └── estilos.css
-│   ├── js/                Lógica de filtrado y panel
-│   │   └── main.js
-│   ├── img/               Imágenes de productos
-│   └── logo/              Logo del proyecto
-│── templates/             Plantillas HTML
-│   ├── base.html          Plantilla base
-│   ├── index.html         Catálogo público
-│   ├── login.html         Login administrador
-│   ├── admin.html         Panel de administración
-│   └── edit.html          Edición de productos
-│── README.md              Documentación del proyecto
-
-
+│── app.py               # Aplicación principal Flask
+│── database.db          # Base de datos SQLite (Producción)
+│── schema.sql           # Estructura de tablas SQL
+│── requirements.txt     # Dependencias del proyecto (Flask, Gunicorn)
+│── Procfile             # Configuración de proceso para Cloud
+│── static/              # Archivos estáticos
+│   ├── CSS/             # Estilos modernos y responsive
+│   ├── img/             # Capturas de pantalla y media
+│   └── js/              # Lógica de filtrado y administración
+└── templates/           # Plantillas Jinja2 (HTML)
 ---
 
 ## ⚙️ Instalación y uso
@@ -56,7 +56,6 @@ http://127.0.0.1:5000/login
 ## Cómo funciona
 
  Catálogo público:
--Los usuarios ven los productos en index.html.
 -Pueden filtrar por categorías y hacer pedidos vía WhatsApp.
 
 Panel de Administración:
@@ -81,10 +80,13 @@ Estilos visuales:
 
 ## Próximas mejoras
 
-Panel de administración con roles de usuario.
+
 Optimización de rendimiento y accesibilidad.
 
 ## Capturas de pantalla
+
+## URL en google
+![URL de Wa-Bros](static/img/urlwalbros.jpeg)
 
 ## Catalogo de productos
 ![Catalogo WalBross](static/img/catalogo.jpg)
@@ -93,7 +95,7 @@ Optimización de rendimiento y accesibilidad.
 ![Login Panel](static/img/login.jpg)
 
 ### Panel de Administracion - Inventario
-![Inventario Actual](static/img/inventario.jpg)
+![Inventario Actual](static/img/inventariowalbros.jpeg)
 
 
 ## AUTOR
