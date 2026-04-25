@@ -42,16 +42,18 @@ WalBross/
 ## ⚙️ Instalación y uso
 1. **Clonamos el repositorio:**
    ```bash
-   git clone [https://github.com/ErwinArleycloud/WalBross.git](https://github.com/ErwinArleycloud/WalBross.git)
-   
-2. Instalar dependencias:
-  pip install -r requirements.txt
+   git clone https://github.com/ErwinArleycloud/WalBross.git
+   ``` 
 
-3. Ejecutamos la aplicaciom:
-  python app.py usando ctrl + ñ en vs
-   
-4. Abrimos en nuestro navegador:
-http://127.0.0.1:5000/login
+2. **Instalar dependencias:**
+   ```bash
+   pip install -r requirements.txt
+   ``` 
+
+3. **Ejecutamos la aplicación:**
+   ```bash
+   python app.py
+   ``` 
 
 ## Cómo funciona
 
