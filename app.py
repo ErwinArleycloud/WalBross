@@ -146,13 +146,10 @@ if __name__ == '__main__':
     conn.execute('''CREATE TABLE IF NOT EXISTS visitas 
                     (id INTEGER PRIMARY KEY, conteo INTEGER DEFAULT 0)''')
     
-    # FORZAMOS el número a 212
-    # La próxima vez que subas el código, si ya está en 212, puedes comentar esta línea
+    # Solo inicializamos si no existe el registro
     check = conn.execute('SELECT * FROM visitas WHERE id = 1').fetchone()
     if not check:
-        conn.execute('INSERT INTO visitas (id, conteo) VALUES (1, 212)')
-    else:
-        conn.execute('UPDATE visitas SET conteo = 212 WHERE id = 1')
+        conn.execute('INSERT INTO visitas (id, conteo) VALUES (1, 0)')
         
     conn.commit()
     conn.close()

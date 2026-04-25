@@ -12,7 +12,7 @@ CREATE TABLE productos (
     categoria TEXT NOT NULL               -- Categoría del producto (pollos, combos, bebidas, adicionales)
 );
 
-CREATE TABLE IF NOT EXiSTS visitas (
+CREATE TABLE IF NOT EXISTS visitas (
     id INTEGER PRIMARY KEY,
     conteo INTEGER DEFAULT 0
 );
