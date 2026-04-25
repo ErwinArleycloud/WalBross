@@ -37,7 +37,7 @@ WalBross/
 │   ├── img/             # Capturas de pantalla y media
 │   └── js/              # Lógica de filtrado y administración
 └── templates/           # Plantillas Jinja2 (HTML)
----
+```
 
 ## ⚙️ Instalación y uso
 1. Clonamos el repositorio:
